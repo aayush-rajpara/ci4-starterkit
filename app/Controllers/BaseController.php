@@ -15,9 +15,47 @@ namespace App\Controllers;
  */
 
 use CodeIgniter\Controller;
+use CodeIgniter\Config\Services;
+use CodeIgniter\HTTP\RequestInterface;
+use CodeIgniter\HTTP\ResponseInterface;
+use Config\Database;
+use Psr\Log\LoggerInterface;
 
 class BaseController extends Controller
 {
+	/**
+     * @var Authorize
+     */
+    protected $authorize;
+    /**
+     * @var Auth
+     */
+    protected $auth;
+
+    /**
+     * @var Config
+     */
+    protected $config;
+
+    /**
+     * @var Db
+     */
+    protected $db;
+
+    /**
+     * @var Pager
+     */
+    protected $pager;
+
+    /**
+     * @var \CodeIgniter\Session\Session
+     */
+    protected $session;
+
+    /**
+     * @var \Config\Services::validation();
+     */
+    protected $validation;
 
 	/**
 	 * An array of helpers to be loaded automatically upon
@@ -26,7 +64,7 @@ class BaseController extends Controller
 	 *
 	 * @var array
 	 */
-	protected $helpers = [];
+	protected $helpers = ['auth', 'inflector', 'form'];
 
 	/**
 	 * Constructor.
@@ -41,6 +79,14 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.:
 		// $this->session = \Config\Services::session();
+		//
+		 
+		$this->session = Services::session();
+        $this->auth = Services::authentication();
+        $this->authorize = Services::authorization();
+        $this->validation = Services::validation();
+        $this->db = Database::connect();
+        $this->pager = Services::pager();
 	}
 
 }
