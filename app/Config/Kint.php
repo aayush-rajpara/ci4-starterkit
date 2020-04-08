@@ -37,7 +37,6 @@ class Kint extends BaseConfig
 	| RichRenderer Settings
 	|--------------------------------------------------------------------------
 	*/
-	public $richTheme = 'aante-light.css';
 	public $richTheme = 'original.css';
 
 	public $richFolder = false;
