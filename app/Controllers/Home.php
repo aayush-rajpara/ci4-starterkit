@@ -1,10 +1,13 @@
-<?php namespace App\Controllers;
+<?php 
+namespace App\Controllers;
 
-class Home extends BaseController
+class Home extends ThemedController
 {
 	public function index()
 	{
-		return view('welcome_message');
+		//d($this);
+		//return view('welcome_message');
+		return $this->render('welcome');
 	}
 
 	//--------------------------------------------------------------------
