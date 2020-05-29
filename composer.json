@@ -11,7 +11,8 @@
     },
     "require-dev": {
         "mikey179/vfsstream": "1.6.*",
-        "phpunit/phpunit": "8.5.*"
+        "phpunit/phpunit": "8.5.*",
+        "heroku/heroku-buildpack-php": "*"
     },
     "autoload-dev": {
         "psr-4": {
