@@ -3,22 +3,16 @@
 <?php $this->section('content') ?>
 
 <div class="container">
-
     <br>
-
     <div class="jumbotron">
-        <h1>Welcome to Bonfire</h1>
-
+        <h1>Welcome to ci4-starterkit</h1>
         <p class="lead">Your powerful web application kick-start based on CodeIgniter <?= \CodeIgniter\CodeIgniter::CI_VERSION ?></p>
     </div>
-
 </div>
 
 <div class="foot">
     <hr>
-
     <div class="container">
-
         <div class="row">
             <div class="col">
                 CodeIgniter <?= \CodeIgniter\CodeIgniter::CI_VERSION ?>
