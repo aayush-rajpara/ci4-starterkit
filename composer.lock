@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b175f7d4283a7d06cc12547cac4e4aec",
+    "content-hash": "5ac54bdeb8f3c3219323e8073526fec2",
     "packages": [
         {
             "name": "codeigniter4/codeigniter4",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/codeigniter4/CodeIgniter4.git",
-                "reference": "6d019e5354629fa7c1e293c2f463d91004c6e26c"
+                "reference": "2b21a053043155fcdd31ec07f70a4cefd3c2ea88"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeigniter4/CodeIgniter4/zipball/6d019e5354629fa7c1e293c2f463d91004c6e26c",
-                "reference": "6d019e5354629fa7c1e293c2f463d91004c6e26c",
+                "url": "https://api.github.com/repos/codeigniter4/CodeIgniter4/zipball/2b21a053043155fcdd31ec07f70a4cefd3c2ea88",
+                "reference": "2b21a053043155fcdd31ec07f70a4cefd3c2ea88",
                 "shasum": ""
             },
             "require": {
@@ -61,7 +61,7 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "issues": "https://github.com/codeigniter4/CodeIgniter4/issues"
             },
-            "time": "2020-05-20T03:15:37+00:00"
+            "time": "2020-06-01T04:17:19+00:00"
         },
         {
             "name": "kint-php/kint",
@@ -252,12 +252,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/monkenWu/CodeIgniter4_CLI-Create.git",
-                "reference": "ad57c45ea82e64d61e32ae8c434f46f327400dd7"
+                "reference": "d1f776d75922424f9da0da84f18a5ea6163c4a6f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/monkenWu/CodeIgniter4_CLI-Create/zipball/ad57c45ea82e64d61e32ae8c434f46f327400dd7",
-                "reference": "ad57c45ea82e64d61e32ae8c434f46f327400dd7",
+                "url": "https://api.github.com/repos/monkenWu/CodeIgniter4_CLI-Create/zipball/d1f776d75922424f9da0da84f18a5ea6163c4a6f",
+                "reference": "d1f776d75922424f9da0da84f18a5ea6163c4a6f",
                 "shasum": ""
             },
             "require": {
@@ -286,7 +286,7 @@
                 "codeigniter4",
                 "create"
             ],
-            "time": "2020-04-10T11:35:06+00:00"
+            "time": "2020-05-30T08:21:17+00:00"
         },
         {
             "name": "psr/log",
@@ -343,16 +343,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "6a1471ddbf2f448b35f3a8e390c903435e6dd5de"
+                "reference": "a390fde13fc9bc2ffb73340bb8f07201a8e85af8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/6a1471ddbf2f448b35f3a8e390c903435e6dd5de",
-                "reference": "6a1471ddbf2f448b35f3a8e390c903435e6dd5de",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/a390fde13fc9bc2ffb73340bb8f07201a8e85af8",
+                "reference": "a390fde13fc9bc2ffb73340bb8f07201a8e85af8",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1"
+                "php": "^7.1 || ^8.0"
             },
             "require-dev": {
                 "doctrine/coding-standard": "^6.0",
@@ -391,7 +391,65 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2019-12-23T19:18:31+00:00"
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Finstantiator",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-05-30T16:47:47+00:00"
+        },
+        {
+            "name": "heroku/heroku-buildpack-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/heroku/heroku-buildpack-php.git",
+                "reference": "6c6cc209a95c65f01d4715540459d5d673be19dc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/heroku/heroku-buildpack-php/zipball/6c6cc209a95c65f01d4715540459d5d673be19dc",
+                "reference": "6c6cc209a95c65f01d4715540459d5d673be19dc",
+                "shasum": ""
+            },
+            "bin": [
+                "bin/heroku-hhvm-apache2",
+                "bin/heroku-hhvm-nginx",
+                "bin/heroku-php-apache2",
+                "bin/heroku-php-nginx"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "David Zuelke",
+                    "email": "dz@heroku.com"
+                }
+            ],
+            "description": "Toolkit for starting a PHP application locally, with or without foreman, using the same config for PHP/HHVM and Apache2/Nginx as on Heroku",
+            "homepage": "https://github.com/heroku/heroku-buildpack-php",
+            "keywords": [
+                "apache",
+                "apache2",
+                "foreman",
+                "heroku",
+                "hhvm",
+                "nginx",
+                "php"
+            ],
+            "time": "2020-05-26T15:47:09+00:00"
         },
         {
             "name": "mikey179/vfsstream",
