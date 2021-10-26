@@ -6,8 +6,7 @@
     "license": "MIT",
     "require": {
         "php": ">=7.2",
-        "codeigniter4/codeigniter4": "dev-develop",
-        "monken/cli-create": "dev-master"
+        "codeigniter4/codeigniter4": "dev-develop"
     },
     "require-dev": {
         "mikey179/vfsstream": "1.6.*",
