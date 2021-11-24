@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/codeigniter4/CodeIgniter4.git",
-                "reference": "6953587413ebb8fb947713e91d35dfeb901768a0"
+                "reference": "2413c8c765dea02e6ea2f8ebd4c150b911fd82b5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/codeigniter4/CodeIgniter4/zipball/6953587413ebb8fb947713e91d35dfeb901768a0",
-                "reference": "6953587413ebb8fb947713e91d35dfeb901768a0",
+                "url": "https://api.github.com/repos/codeigniter4/CodeIgniter4/zipball/2413c8c765dea02e6ea2f8ebd4c150b911fd82b5",
+                "reference": "2413c8c765dea02e6ea2f8ebd4c150b911fd82b5",
                 "shasum": ""
             },
             "require": {
@@ -37,11 +37,10 @@
                 "mikey179/vfsstream": "^1.6",
                 "nexusphp/cs-config": "^3.3",
                 "nexusphp/tachycardia": "^1.0",
-                "phpstan/phpstan": "^0.12.91",
+                "phpstan/phpstan": "^1.0",
                 "phpunit/phpunit": "^9.1",
                 "predis/predis": "^1.1",
-                "rector/rector": "0.11.60",
-                "symplify/package-builder": "^9.3"
+                "rector/rector": "0.12.4"
             },
             "suggest": {
                 "ext-fileinfo": "Improves mime type detection for files"
@@ -98,7 +97,7 @@
                 "slack": "https://codeigniterchat.slack.com",
                 "issues": "https://github.com/codeigniter4/CodeIgniter4/issues"
             },
-            "time": "2021-10-26T11:12:32+00:00"
+            "time": "2021-11-24T12:55:20+00:00"
         },
         {
             "name": "kint-php/kint",
@@ -746,12 +745,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/TypeResolver.git",
-                "reference": "a12f7e301eb7258bb68acd89d4aefa05c2906cae"
+                "reference": "f8ec4ab631de5a97769e66b13418c3b8b24e81f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/a12f7e301eb7258bb68acd89d4aefa05c2906cae",
-                "reference": "a12f7e301eb7258bb68acd89d4aefa05c2906cae",
+                "url": "https://api.github.com/repos/phpDocumentor/TypeResolver/zipball/f8ec4ab631de5a97769e66b13418c3b8b24e81f4",
+                "reference": "f8ec4ab631de5a97769e66b13418c3b8b24e81f4",
                 "shasum": ""
             },
             "require": {
@@ -787,9 +786,9 @@
             "description": "A PSR-5 based resolver of Class names, Types and Structural Element Names",
             "support": {
                 "issues": "https://github.com/phpDocumentor/TypeResolver/issues",
-                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.5.1"
+                "source": "https://github.com/phpDocumentor/TypeResolver/tree/1.x"
             },
-            "time": "2021-10-02T14:08:47+00:00"
+            "time": "2021-11-24T08:29:39+00:00"
         },
         {
             "name": "phpspec/prophecy",
@@ -1163,12 +1162,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "046a38e601bb1b3f416e151562c08c2d6d92e1da"
+                "reference": "c5d9618d228f27fc760be3cf27f38d1a68e195dc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/046a38e601bb1b3f416e151562c08c2d6d92e1da",
-                "reference": "046a38e601bb1b3f416e151562c08c2d6d92e1da",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c5d9618d228f27fc760be3cf27f38d1a68e195dc",
+                "reference": "c5d9618d228f27fc760be3cf27f38d1a68e195dc",
                 "shasum": ""
             },
             "require": {
@@ -1252,7 +1251,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2021-10-24T15:01:53+00:00"
+            "time": "2021-11-11T09:10:12+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -1518,12 +1517,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/exporter.git",
-                "reference": "6b853149eab67d4da22291d36f5b0631c0fd856e"
+                "reference": "0c32ea2e40dbf59de29f3b49bf375176ce7dd8db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/6b853149eab67d4da22291d36f5b0631c0fd856e",
-                "reference": "6b853149eab67d4da22291d36f5b0631c0fd856e",
+                "url": "https://api.github.com/repos/sebastianbergmann/exporter/zipball/0c32ea2e40dbf59de29f3b49bf375176ce7dd8db",
+                "reference": "0c32ea2e40dbf59de29f3b49bf375176ce7dd8db",
                 "shasum": ""
             },
             "require": {
@@ -1532,7 +1531,7 @@
             },
             "require-dev": {
                 "ext-mbstring": "*",
-                "phpunit/phpunit": "^6.0"
+                "phpunit/phpunit": "^8.5"
             },
             "type": "library",
             "extra": {
@@ -1587,7 +1586,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-11-30T07:47:53+00:00"
+            "time": "2021-11-11T13:51:24+00:00"
         },
         {
             "name": "sebastian/global-state",
