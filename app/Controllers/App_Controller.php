@@ -18,7 +18,7 @@ use Psr\Log\LoggerInterface;
  *
  * @package Bonfire\Controllers
  */
-class ThemedController extends BaseController
+class App_Controller extends BaseController
 {
     /**
      * The name of the theme's folder.
