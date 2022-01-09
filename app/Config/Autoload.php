@@ -53,6 +53,12 @@ class Autoload extends \CodeIgniter\Config\AutoloadConfig
 			'App'         => APPPATH,                // To ensure filters, etc still found,
 			APP_NAMESPACE => APPPATH,                // For custom namespace
 			'Config'      => APPPATH . 'Config',
+			'Myth\Auth'   => APPPATH .'ThirdParty/myth-auth/src',
+			'Firebase\JWT'   => APPPATH .'ThirdParty/php-jwt/src',
+			'WpOrg\Requests'   => APPPATH .'ThirdParty/requests/src',
+			'PHPSQLParser'          => APPPATH .'ThirdParty/php-sql-parser/src/PHPSQLParser', 
+			'Hermawan\DataTables'   => APPPATH .'ThirdParty/codeigniter4-datatables/src',
+			'Fluent\Cors'   => APPPATH .'ThirdParty/codeigniter4-cors/src',  
 		];
 
 		/**
