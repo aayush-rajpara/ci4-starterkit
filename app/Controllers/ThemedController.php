@@ -32,17 +32,10 @@ class ThemedController extends BaseController
      */
     protected $renderer;
 
-    /**
-     * @var MetaCollection
-     */
-    protected $meta;
-
     public function initController(RequestInterface $request, ResponseInterface $response, LoggerInterface $logger)
     {
         // Ensure our site-wide helpers are loaded without messing up per-controller settings.
         $this->helpers = array_merge($this->helpers, ['asset']);
-        $this->meta = new MetaCollection();
-
         parent::initController($request, $response, $logger);
     }
 
