@@ -65,8 +65,6 @@ class ThemedController extends BaseController
      */
     public function render(string $view, array $data = [])
     {
-        $data['meta'] = $this->meta;
-
         return $this->renderView($view, $data, ['saveData' => true]);
     }
 
