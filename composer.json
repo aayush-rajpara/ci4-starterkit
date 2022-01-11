@@ -5,8 +5,9 @@
     "homepage": "https://codeigniter.com",
     "license": "MIT",
     "require": {
-        "php": ">=7.2",
-        "codeigniter4/codeigniter4": "dev-develop"
+        "php": ">=7.4",
+        "codeigniter4/codeigniter4": "dev-develop",
+        "tightenco/collect": "dev-laravel-8-ongoing"
     },
     "require-dev": {
         "mikey179/vfsstream": "1.6.*",
