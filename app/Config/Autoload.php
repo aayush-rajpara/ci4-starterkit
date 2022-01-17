@@ -17,6 +17,25 @@ use CodeIgniter\Config\AutoloadConfig;
  */
 class Autoload extends AutoloadConfig
 {
+    protected $ModuleLocation = ROOTPATH . 'modules';
+    protected $ModuleJson = APPPATH . "Config/modules.json";
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load_modules();
+    }
+
+    public function load_modules(){
+        $modules = file_get_contents($this->ModuleJson);
+        $modules = @json_decode($modules);
+        if (!($modules && is_array($modules) && count($modules))) {
+            return false;
+        }
+
+        foreach ($modules as $module) {
+           $this->psr4[$module] = $this->ModuleLocation . DIRECTORY_SEPARATOR . $module.DIRECTORY_SEPARATOR ;
+        }
+    }
     /**
      * -------------------------------------------------------------------
      * Namespaces
