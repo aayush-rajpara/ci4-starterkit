@@ -9,12 +9,12 @@
         <p class="lead">Your powerful web application kick-start based on CodeIgniter <?= \CodeIgniter\CodeIgniter::CI_VERSION ?></p>
         <h4>Third-Party Packages added in application</h4>
         <p>
-        <li> <a href='https://github.com/lonnieezell/myth-auth'>Myth\Auth</a>=>APPPATH .'ThirdParty/myth-auth/src',</li>
-        <li> <a href='https://github.com/firebase/php-jwt'>Firebase\JWT</a>=> APPPATH .'ThirdParty/php-jwt/src',</li>
-        <li><a href='https://github.com/WordPress/Requests'>WpOrg\Requests</a>=> APPPATH .'ThirdParty/requests/src',</li>
-        <li> <a href='https://github.com/greenlion/PHP-SQL-Parser'>PHPSQLParser</a>=> APPPATH .'ThirdParty/php-sql-parser/src/PHPSQLParser', </li>
-        <li> <a href='https://github.com/hermawanramadhan/CodeIgniter4-DataTables'>Hermawan\DataTables</a>=> APPPATH .'ThirdParty/codeigniter4-datatables/src',</li>
-        <li> <a href='https://github.com/agungsugiarto/codeigniter4-cors'>agungsugiarto/codeigniter4-cors</a>=> APPPATH .'ThirdParty/codeigniter4-cors/src',  </li>
+        <li> <a href='https://github.com/firtadokei/codeigniter-vitejs'>Codeigniter + viteJs</a></li>
+        <li> <a href='https://github.com/firebase/php-jwt'>Firebase\JWT</a></li>
+        <li><a href='https://github.com/WordPress/Requests'>WpOrg\Requests</a></li>
+        <li> <a href='https://github.com/greenlion/PHP-SQL-Parser'>PHPSQLParser</a></li>
+        <li> <a href='https://github.com/hermawanramadhan/CodeIgniter4-DataTables'>Hermawan\DataTables</a></li>
+        <li> <a href='https://github.com/agungsugiarto/codeigniter4-cors'>agungsugiarto/codeigniter4-cors</a></li>
     </p>
     </div>
 </div>
