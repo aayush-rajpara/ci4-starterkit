@@ -1,18 +1,17 @@
 {
-  "scripts": {
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs"
-  },
-  "devDependencies": {
-    "vuepress": "^2.0.0-beta.27"
-  },
-  "name": "ci4-starterkit",
-  "version": "1.0.0",
-  "description": "Codeigniter4 starterkit",
-  "main": "index.js",
-  "repository": "https://github.com/truelineinfotech/ci4-starterkit.git",
-  "author": "chirag jagani <trueline.chirag@gmail.com>",
-  "license": "MIT",
-  "private": true,
-  "dependencies": {}
+    "name": "codeigniter-vite-vue",
+    "private": true,
+    "version": "0.0.0",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "dependencies": {
+        "vue": "^3.2.37"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-vue": "^3.0.0",
+        "vite": "^3.0.0"
+    }
 }

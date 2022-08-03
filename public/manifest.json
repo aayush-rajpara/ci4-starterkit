@@ -1,0 +1,21 @@
+{
+  "resources/vue.svg": {
+    "file": "build/vue.eaed1fc8.svg",
+    "src": "resources/vue.svg"
+  },
+  "resources/main.js": {
+    "file": "build/main.5c4ff204.js",
+    "src": "resources/main.js",
+    "isEntry": true,
+    "css": [
+      "build/main.ecfbdf05.css"
+    ],
+    "assets": [
+      "build/vue.eaed1fc8.svg"
+    ]
+  },
+  "resources/main.css": {
+    "file": "build/main.ecfbdf05.css",
+    "src": "resources/main.css"
+  }
+}
