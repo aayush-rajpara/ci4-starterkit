@@ -11,8 +11,7 @@
         "rmccue/requests": "^2.0",
         "firebase/php-jwt": "^6.3",
         "hermawan/codeigniter4-datatables": "^0.6.1",
-        "agungsugiarto/codeigniter4-cors": "^2.0",
-        "mihatori/codeignitervite": "^1.0"
+        "agungsugiarto/codeigniter4-cors": "^2.0"
     },
     "require-dev": {
         "mikey179/vfsstream": "1.6.*",
