@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d59217f959191b9b094b52f56f1dbfd",
+    "content-hash": "ea8c5f4c1c5981924530954e8f3c4acd",
     "packages": [
         {
             "name": "agungsugiarto/codeigniter4-cors",
@@ -526,57 +526,6 @@
                 }
             ],
             "time": "2022-03-08T20:15:36+00:00"
-        },
-        {
-            "name": "mihatori/codeignitervite",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/firtadokei/codeigniter-vitejs.git",
-                "reference": "f388e0774ff86a85325e7d40ee888c1f48e2ae8a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/firtadokei/codeigniter-vitejs/zipball/f388e0774ff86a85325e7d40ee888c1f48e2ae8a",
-                "reference": "f388e0774ff86a85325e7d40ee888c1f48e2ae8a",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.4 || ^8.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Mihatori\\CodeigniterVite\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mihatori Kei",
-                    "email": "mihatorikei@gmail.com",
-                    "homepage": "https://github.com/firtadokei/"
-                }
-            ],
-            "description": "Integrate viteJs in codeiginter4 framework",
-            "homepage": "https://github.com/firtadokei/codeigniter-vitejs",
-            "keywords": [
-                "codeigniter",
-                "codeigniter spa",
-                "codeigniter-reactJs",
-                "codeigniter-svelteJs",
-                "codeigniter-viteJs",
-                "codeigniter-vueJs",
-                "codeigniter4"
-            ],
-            "support": {
-                "issues": "https://github.com/firtadokei/codeigniter-vitejs/issues",
-                "source": "https://github.com/firtadokei/codeigniter-vitejs/tree/v1.1.0"
-            },
-            "time": "2022-08-22T00:36:24+00:00"
         },
         {
             "name": "psr/log",

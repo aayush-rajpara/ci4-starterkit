@@ -9,7 +9,7 @@
         <p class="lead">Your powerful web application kick-start based on CodeIgniter <?= \CodeIgniter\CodeIgniter::CI_VERSION ?></p>
         <h4>Third-Party Packages added in application</h4>
         <p>
-        <li> <a href='https://github.com/firtadokei/codeigniter-vitejs'>Codeigniter + viteJs</a></li>
+        <li>Fully Dynamic Modules Concept</a></li>
         <li> <a href='https://github.com/firebase/php-jwt'>Firebase\JWT</a></li>
         <li><a href='https://github.com/WordPress/Requests'>WpOrg\Requests</a></li>
         <li> <a href='https://github.com/greenlion/PHP-SQL-Parser'>PHPSQLParser</a></li>
