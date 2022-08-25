@@ -17,25 +17,6 @@ use CodeIgniter\Config\AutoloadConfig;
  */
 class Autoload extends AutoloadConfig
 {
-    protected $ModuleLocation = ROOTPATH . 'modules';
-    protected $ModuleJson = APPPATH . "Config/modules.json";
-    public function __construct()
-    {
-        parent::__construct();
-        $this->load_modules();
-    }
-
-    public function load_modules(){
-        $modules = file_get_contents($this->ModuleJson);
-        $modules = @json_decode($modules);
-        if (!($modules && is_array($modules) && count($modules))) {
-            return false;
-        }
-
-        foreach ($modules as $module) {
-           $this->psr4[$module] = $this->ModuleLocation . DIRECTORY_SEPARATOR . $module.DIRECTORY_SEPARATOR ;
-        }
-    }
     /**
      * -------------------------------------------------------------------
      * Namespaces
@@ -62,7 +43,6 @@ class Autoload extends AutoloadConfig
     public $psr4 = [
         APP_NAMESPACE => APPPATH, // For custom app namespace
         'Config'      => APPPATH . 'Config',
-        'Myth\Auth'   => APPPATH .'ThirdParty/myth-auth/src',
         'Firebase\JWT'   => APPPATH .'ThirdParty/php-jwt/src',
         'WpOrg\Requests'   => APPPATH .'ThirdParty/requests/src',
         'PHPSQLParser'          => APPPATH .'ThirdParty/php-sql-parser/src/PHPSQLParser', 
