@@ -31,23 +31,17 @@ class Autoload extends AutoloadConfig
      * else you will need to modify all of those classes for this to work.
      *
      * Prototype:
-     *```
      *   $psr4 = [
      *       'CodeIgniter' => SYSTEMPATH,
-     *       'App'	       => APPPATH
+     *       'App'         => APPPATH
      *   ];
-     *```
      *
-     * @var array<string, string>
+     * @var array<string, array<int, string>|string>
+     * @phpstan-var array<string, string|list<string>>
      */
     public $psr4 = [
         APP_NAMESPACE => APPPATH, // For custom app namespace
         'Config'      => APPPATH . 'Config',
-        'Firebase\JWT'   => APPPATH .'ThirdParty/php-jwt/src',
-        'WpOrg\Requests'   => APPPATH .'ThirdParty/requests/src',
-        'PHPSQLParser'          => APPPATH .'ThirdParty/php-sql-parser/src/PHPSQLParser', 
-        'Hermawan\DataTables'   => APPPATH .'ThirdParty/codeigniter4-datatables/src',
-        'Fluent\Cors'   => APPPATH .'ThirdParty/codeigniter4-cors/src',  
     ];
 
     /**
@@ -61,11 +55,9 @@ class Autoload extends AutoloadConfig
      * were being autoloaded through a namespace.
      *
      * Prototype:
-     *```
      *   $classmap = [
      *       'MyClass'   => '/path/to/class/file.php'
      *   ];
-     *```
      *
      * @var array<string, string>
      */
@@ -80,13 +72,26 @@ class Autoload extends AutoloadConfig
      * or for loading functions.
      *
      * Prototype:
-     * ```
-     *	  $files = [
-     *	 	   '/path/to/my/file.php',
-     *    ];
-     * ```
+     *   $files = [
+     *       '/path/to/my/file.php',
+     *   ];
      *
-     * @var array<int, string>
+     * @var string[]
+     * @phpstan-var list<string>
      */
     public $files = [];
+
+    /**
+     * -------------------------------------------------------------------
+     * Helpers
+     * -------------------------------------------------------------------
+     * Prototype:
+     *   $helpers = [
+     *       'form',
+     *   ];
+     *
+     * @var string[]
+     * @phpstan-var list<string>
+     */
+    public $helpers = [];
 }

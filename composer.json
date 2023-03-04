@@ -6,12 +6,10 @@
     "license": "MIT",
     "require": {
         "php": ">=7.4",
-        "codeigniter4/codeigniter4": "dev-develop",
         "tightenco/collect": "dev-laravel-8-ongoing",
         "rmccue/requests": "^2.0",
-        "firebase/php-jwt": "^6.3",
         "hermawan/codeigniter4-datatables": "^0.6.1",
-        "agungsugiarto/codeigniter4-cors": "^2.0"
+        "codeigniter4/framework": "^4.0"
     },
     "require-dev": {
         "mikey179/vfsstream": "1.6.*",
@@ -34,12 +32,5 @@
         "source": "https://github.com/codeigniter4/CodeIgniter4",
         "slack": "https://codeigniterchat.slack.com"
     },
-    "minimum-stability": "dev",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/codeigniter4/codeigniter4"
-        }
-    ],
     "prefer-stable": true
 }
