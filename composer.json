@@ -9,7 +9,8 @@
         "tightenco/collect": "dev-laravel-8-ongoing",
         "rmccue/requests": "^2.0",
         "hermawan/codeigniter4-datatables": "^0.6.1",
-        "codeigniter4/framework": "^4.0"
+        "codeigniter4/framework": "^4.0",
+        "agungsugiarto/codeigniter4-eloquent": "^2.0"
     },
     "require-dev": {
         "mikey179/vfsstream": "1.6.*",
