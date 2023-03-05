@@ -11,7 +11,8 @@
         "hermawan/codeigniter4-datatables": "^0.6.1",
         "codeigniter4/framework": "^4.0",
         "agungsugiarto/codeigniter4-eloquent": "^2.0",
-        "codeigniter4/settings": "^2.1"
+        "codeigniter4/settings": "^2.1",
+        "bainternet/php-hooks": "^1.0"
     },
     "require-dev": {
         "mikey179/vfsstream": "1.6.*",
