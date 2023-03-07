@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="<?= base_url('/assets/libs/perfect-scrollbar/perfect-scrollbar.css') ?>" />
 
 <!-- Page CSS -->
+<link rel="stylesheet" href="<?= base_url('/assets/css/pages/page-auth.css') ?>" />
 
 <!-- Helpers -->
 <script src="<?= base_url('/assets/js/helpers.js') ?>"></script>
