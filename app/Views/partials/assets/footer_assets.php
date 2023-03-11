@@ -13,6 +13,9 @@
 <script async defer src="https://buttons.github.io/buttons.js"></script>
 
 <!-- / Layout wrapper -->
+
+<?= $this->renderSection('script'); ?>
+
 </body>
 
 </html>
