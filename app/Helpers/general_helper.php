@@ -4,7 +4,9 @@ if (!function_exists('get_logged_in_user')) {
     function get_logged_in_user($userid) {
         $db = \Config\Database::connect();
         $builder = $db->table('users');
-        return $builder->getWhere(["id" => $userid])->getRow();
+        $builder->select('users.*, auth_groups_users.group');
+        $builder->join('auth_groups_users', 'auth_groups_users.user_id = users.id', 'left');
+        return $builder->getWhere(["users.id" => $userid])->getRow();
     }
 }
 
