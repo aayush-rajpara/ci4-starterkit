@@ -1,13 +1,4 @@
 <?= $this->include('partials/header') ?>
-
-<?php
-    if (get_option('allow_user_to_register') == 'yes') {
-        setting()->set('Auth.allowRegistration', true);
-    } else {
-        setting()->set('Auth.allowRegistration', false);
-    }
-?>
-
 <!-- Content -->
 <div class="container-xxl">
     <div class="authentication-wrapper authentication-basic container-p-y">

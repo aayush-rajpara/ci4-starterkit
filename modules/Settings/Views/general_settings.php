@@ -24,7 +24,7 @@
 		            name="allow_user_to_register"
 		            id="allow_user_to_register"
 		            value="yes"
-		            <?php if(get_option('allow_user_to_register') == 'yes') { echo 'checked'; } ?>
+		            <?php if(setting('Auth.allowRegistration')) { echo 'checked'; } ?>
 		            />
 		            <label class="form-check-label" for="yes">YES</label>
 		        </div>
@@ -35,7 +35,7 @@
 		            name="allow_user_to_register"
 		            id="allow_user_to_register"
 		            value="no"
-		            <?php if(get_option('allow_user_to_register') == 'no') { echo 'checked'; } ?>
+		            <?php if(!setting('Auth.allowRegistration')) { echo 'checked'; } ?>
 		            />
 		            <label class="form-check-label" for="no">NO</label>
 		        </div>
@@ -43,7 +43,6 @@
 		</div>
 	</div>
 </div>
-
 <script>
 	$('#preview-image').hide();
         $('#profile_picture').change(function(){

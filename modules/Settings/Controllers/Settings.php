@@ -48,9 +48,13 @@ class Settings extends \App\Controllers\BaseController
             }
         }
 
+        setting()->set('Auth.allowRegistration', $posted_data['allow_user_to_register'] == 'yes');
+        unset($posted_data['allow_user_to_register']);
+
         foreach ($posted_data as $key => $settings) {
             service('settings')->set('App.'.$key, $settings);
         }
+
         echo json_encode(['success' => true]);
     }
 
