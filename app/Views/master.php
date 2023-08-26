@@ -18,5 +18,6 @@
         <?= $this->include('includes/footer') ?>  
     </div>
     <?= $this->include('includes/assets/footer_assets') ?>
+    <?= $this->renderSection('script') ?>
 </body>
 </html>

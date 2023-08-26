@@ -2,15 +2,17 @@
 
 namespace Menus\Controllers;
 
-use Menus\Models\MenusModel;
 use Menus\Entities\MenusEntity;
+use Menus\Models\MenusModel;
 
 class Menus extends \App\Controllers\BaseController
 {
     public function index()
     {
-        if ($this->request->getPost()) {
+        $entity = new MenusEntity();
+        $model  = new MenusModel();
 
+        if ($this->request->getPost()) {
             $validationRules = [
                 'parent_id'   => 'required|numeric',
                 'active'      => 'required|numeric',
@@ -23,14 +25,15 @@ class Menus extends \App\Controllers\BaseController
                 return redirect()->back()->withInput()->with('error', $this->validator->getErrors());
             }
 
-            $entity = new MenusEntity();
-            $model  = new MenusModel();
-
             $postData = $this->request->getPost();
             $postData['sequence'] = $entity->sequence() + 1;
 
             $model->insert($postData);
+
+            return redirect()->to(route_to('routeToMenu'));
         }
-        echo view('Menus\Views\index');
+
+        $data['menus'] = $model->findAll();
+        echo view('Menus\Views\index', $data);
     }
 }
