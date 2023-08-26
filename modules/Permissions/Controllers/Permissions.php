@@ -1,8 +1,25 @@
 <?php
 namespace Permissions\Controllers;
+use \Permissions\Models\PermissionsModel;
+use CodeIgniter\API\ResponseTrait;
 
 class Permissions extends \App\Controllers\BaseController
 {
+   use ResponseTrait;
+
+  /** @var \agungsugiarto\boilerplate\Models\PermissionModel */
+  protected $permission;
+
+  /**
+   * __construct.
+   *
+   * @return void
+   */
+  public function __construct()
+  {
+      $this->permission = new PermissionsModel();
+  }
+
   /**
    * INDEX PERMISSIONS
    */
@@ -13,8 +30,13 @@ class Permissions extends \App\Controllers\BaseController
   /**
    * INSERT PERMISSIONS
    */
-  public function insert() {
-    echo view('Permissions\Views\insert_permissions');
+  public function save() {
+    $posted_data = $this->request->getPost();
+    if (!$data = $this->permission->save($this->request->getPost())) {
+      return $this->fail($this->permission->errors());
+    }
+
+    return $this->respondCreated($data, lang('Permission Added'));
   }
 
   /**

@@ -4,16 +4,39 @@ use \CodeIgniter\Model;
 
 class PermissionsModel extends Model
 {
-  protected $table = 'permissions';
-  protected $primaryKey = 'id';
-  protected $allowedFields = [];
-  protected $useTimestamps = true;
-  protected $createdField  = 'created_at';
-  protected $updatedField  = 'updated_at';
+    protected $table         = 'auth_permissions';
+    protected $returnType    = Permission::class;
+    protected $allowedFields = [
+        'name',
+        'description',
+    ];
+    // protected $validationRules = [
+    //     'name'        => 'required|max_length[255]|is_unique[auth_permissions.name,name,{name}]',
+    //     'description' => 'max_length[255]',
+    // ];
 
-  // protected $useSoftDeletes = true;
-  // protected $deletedField  = 'deleted_at';
-  // protected $skipValidation  = false;
+  const ORDERABLE = [
+        1 => 'name',
+        2 => 'description',
+    ];
 
-  protected $returnType = 'Permissions\Entities\Permissions';
+    /**
+     * Get resource data.
+     *
+     * @param string $search
+     *
+     * @return \CodeIgniter\Database\BaseBuilder
+     */
+    public function getResource(string $search = '')
+    {
+        $builder = $this->builder()
+            ->select('id, name, description');
+
+        return empty($search)
+            ? $builder
+            : $builder->groupStart()
+                ->like('name', $search)
+                ->orLike('description', $search)
+            ->groupEnd();
+    }
 }
