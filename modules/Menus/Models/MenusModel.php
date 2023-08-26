@@ -6,9 +6,9 @@ use \CodeIgniter\Model;
 
 class MenusModel extends Model
 {
-    protected $table = 'menus';
+    protected $table = 'menu';
     protected $primaryKey = 'id';
-    protected $allowedFields = [];
+    protected $allowedFields = ['parent_id', 'active', 'title', 'icon', 'route', 'sequence'];
     protected $useTimestamps = true;
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
