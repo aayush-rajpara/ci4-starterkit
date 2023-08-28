@@ -3,7 +3,7 @@
 <?= $this->section('content_header') ?><h1>Permission</h1><?= $this->endSection() ?>
 <?= $this->section('link') ?>Permission<?= $this->endSection() ?>
 <?= $this->section('content') ?>
-<div class="row">
+<div class="row mb-3">
 	<a href="javascript:void(0)" class="btn btn-primary btn-sm" onclick="add_edit_permission()">+ Add Permission</a>
 </div>
     <table id="table-permissions" class="table table-striped table-hover va-middle">
@@ -60,8 +60,72 @@
 <?= $this->endSection() ?>
 <?= $this->section('script') ?>
 <script>
-	function add_edit_permission() {
+	 var permissionTable = $('#table-permissions').DataTable({
+        dom: '<"row"<"col-md-3"l><"col-md-6"B><"col-md-3"f>><"row"<"col-md-12 mb-2"t>><"row mb-3"<"col"i><"col"p>>',
+        buttons: [
+            'colvis',
+            'excel',
+            'csv',
+            'copy',
+            'pdf',
+            'print'
+        ],
+        processing: true,
+        serverSide: true,
+        responsive: true,
+        ajax: {
+            url : '<?php echo site_url('permissions'); ?>',
+            method : 'POST',
+        },
+        order: [[ 0, 'asc' ]]
+    });
+	function add_edit_permission(permission_id) {
         $('#permission-management-modal').modal('show');
+        if (permission_id !== '' && permission_id !== undefined) {
+            $.post('<?= base_url('permissions/getPermission') ?>/' + permission_id).done(function(response) {
+                var editPermission = $('#add-edit-permission');
+                editPermission.find('input[name="id"]').val(response.id);
+                editPermission.find('input[name="name"]').val(response.name);
+                editPermission.find('input[name="description"]').val(response.description);
+            }).fail(function() {
+                // Toast.fire({
+                //     icon: 'error',
+                //     title: 'Something went wrong',
+                // });
+            });
+        }
     }
+
+    $(document).on('click', '.btn-delete-permission', function(e) {
+        Swal.fire({
+                title: '<?= lang('permission delete') ?>',
+                text: "<?= lang('permissison delete') ?>",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: '<?= lang('Are you sure ? Delete') ?>'
+            })
+            .then((result) => {
+                if (result.value) {
+                    var id = $(this).attr('data-id');
+                    $.ajax({
+                        url: '<?= base_url('permissions/delete/') ?>/' + id,
+                        method: 'DELETE',
+                    }).done((data, textStatus, jqXHR) => {
+                        // Toast.fire({
+                        //     icon: 'success',
+                        //     title: 'Permission deleted.',
+                        // });
+                        permissionTable.ajax.reload();
+                    }).fail((jqXHR, textStatus, errorThrown) => {
+                        Toast.fire({
+                            icon: 'error',
+                            title: 'Something went wrong',
+                        });
+                    })
+                }
+            })
+    });
 </script>
 <?= $this->endSection() ?>

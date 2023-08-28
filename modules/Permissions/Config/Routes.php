@@ -6,8 +6,8 @@ $permissions_module_namespace = ['namespace' => 'Permissions\Controllers'];
 
 // Permissions Module Routes
 $routes->group('permissions',$permissions_module_namespace, function($routes) {
-  $routes->get('', 'Permissions::index');
+  $routes->match(['get', 'post'],'/', 'Permissions::index');
   $routes->post('save', 'Permissions::save');
-  $routes->get('update', 'Permissions::update');
-  $routes->get('delete', 'Permissions::delete');
+  $routes->post('getPermission/(:num)', 'Permissions::getPermission/$1');
+  $routes->delete('delete/(:num)', 'Permissions::delete/$1');
 });
