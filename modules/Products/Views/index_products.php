@@ -140,10 +140,10 @@
                     $('#add-edit-products').find('input[name="' + elem + '"]').addClass('is-invalid').after('<p class="text-danger">' + messages + '</p>');
                 });
             } else {
-                // Toast.fire({
-                //     icon: 'success',
-                //     title: data.message
-                // });
+                Toast.fire({
+                    icon: 'success',
+                    title: data.message
+                });
                 productsTable.ajax.reload();
                 $("#add-edit-products").trigger("reset");
                 $("#product-management-modal").modal('hide');
@@ -168,10 +168,10 @@
                 editproduct.find('input[name="version"]').val(response.version);
                 editproduct.find('input[name="category"]').val(response.category);
             }).fail(function() {
-                // Toast.fire({
-                //     icon: 'error',
-                //     title: 'Something went wrong',
-                // });
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Something went wrong',
+                });
             });
         }
     }
@@ -193,16 +193,16 @@
                         url: '<?= base_url('products/deleteProductById') ?>/' + id,
                         method: 'DELETE',
                     }).done((data, textStatus, jqXHR) => {
-                        // Toast.fire({
-                        //     icon: 'success',
-                        //     title: 'product deleted.',
-                        // });
+                        Toast.fire({
+                            icon: 'success',
+                            title: 'product deleted.',
+                        });
                         productsTable.ajax.reload();
                     }).fail((jqXHR, textStatus, errorThrown) => {
-                        // Toast.fire({
-                        //     icon: 'error',
-                        //     title: 'Something went wrong',
-                        // });
+                        Toast.fire({
+                            icon: 'error',
+                            title: 'Something went wrong',
+                        });
                     })
                 }
             })

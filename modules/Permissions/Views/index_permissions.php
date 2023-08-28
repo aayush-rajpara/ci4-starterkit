@@ -3,21 +3,36 @@
 <?= $this->section('content_header') ?><h1>Permission</h1><?= $this->endSection() ?>
 <?= $this->section('link') ?>Permission<?= $this->endSection() ?>
 <?= $this->section('content') ?>
-<div class="row mb-3">
-	<a href="javascript:void(0)" class="btn btn-primary btn-sm" onclick="add_edit_permission()">+ Add Permission</a>
+<div class="row">
+    <div class="col">
+        <div class="card card-primary card-outline">
+            <div class="card-header">
+                <div class="float-left">
+                    <h5 class="m-0">Permission</h5>
+                </div>
+                <div class="float-right">
+                    <div class="btn-group">
+                        <a href="javascript:void(0)" class="btn btn-sm btn-block btn-primary" onclick="add_edit_permission()"><i class="fa fa-plus"></i> Add new Permission</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <table id="table-permissions" class="table table-striped table-hover va-middle">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Permission</th>
+                            <th>Description</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
-    <table id="table-permissions" class="table table-striped table-hover va-middle">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>Permission</th>
-                <th>Description</th>
-                <th>Action</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
     <!-- Add/Edit Modal -->
 <div class="modal fade" id="permission-management-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -88,10 +103,10 @@
                 editPermission.find('input[name="name"]').val(response.name);
                 editPermission.find('input[name="description"]').val(response.description);
             }).fail(function() {
-                // Toast.fire({
-                //     icon: 'error',
-                //     title: 'Something went wrong',
-                // });
+                Toast.fire({
+                    icon: 'error',
+                    title: 'Something went wrong',
+                });
             });
         }
     }
@@ -113,10 +128,10 @@
                         url: '<?= base_url('permissions/delete/') ?>/' + id,
                         method: 'DELETE',
                     }).done((data, textStatus, jqXHR) => {
-                        // Toast.fire({
-                        //     icon: 'success',
-                        //     title: 'Permission deleted.',
-                        // });
+                        Toast.fire({
+                            icon: 'success',
+                            title: 'Permission deleted.',
+                        });
                         permissionTable.ajax.reload();
                     }).fail((jqXHR, textStatus, errorThrown) => {
                         Toast.fire({
