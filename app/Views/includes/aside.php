@@ -26,10 +26,34 @@
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <li class="nav-item">
-          <a href="#" class="nav-link">
+          <a href="<?= route_to('home') ?>" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
               Dashbord
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="<?= route_to('permissions') ?>" class="nav-link">
+            <i class="fas fa-venus-mars"></i>
+            <p>
+              Permission
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="<?= route_to('products') ?>" class="nav-link">
+            <i class="fas fa-yin-yang"></i>
+            <p>
+              Products
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="<?= route_to('activity_log') ?>" class="nav-link">
+            <i class="fab fa-app-store-ios"></i>
+            <p>
+              Activity Log
             </p>
           </a>
         </li>
