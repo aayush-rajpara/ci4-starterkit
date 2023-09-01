@@ -4,11 +4,18 @@ namespace Menus\Controllers;
 
 use Menus\Entities\MenusEntity;
 use Menus\Models\MenusModel;
+use CodeIgniter\API\ResponseTrait;
 
 class Menus extends \App\Controllers\BaseController
 {
+    use ResponseTrait;
+
     public function index()
     {
+        if ($this->request->isAJAX()) {
+            return $this->respond(['data' => nestable()]);
+        }
+
         $entity = new MenusEntity();
         $model  = new MenusModel();
 
@@ -35,5 +42,16 @@ class Menus extends \App\Controllers\BaseController
 
         $data['menus'] = $model->findAll();
         echo view('Menus\Views\index', $data);
+    }
+
+    public function delete($id)
+    {
+        $model  = new MenusModel();
+
+        if (!$model->delete($id)) {
+            return $this->failNotFound(lang('boilerplate.menu.msg.msg_get_fail'));
+        }
+
+        return $this->respondDeleted(['id' => $id], lang('boilerplate.menu.msg.msg_delete'));
     }
 }
